@@ -1336,6 +1336,11 @@ public class JQMDataTable extends JQMTableGrid {
         this.lengthMenu = lengthMenu;
     }
 
+    /** Please note that this is only relevant when paging is enabled in the table. */
+    public void setPageLength(int length) {
+        if (enhanced && length >= -1 && length != 0) JsDataTable.setPageLength(getElement(), length);
+    }
+
     public boolean isProcessing() {
         return processing;
     }
