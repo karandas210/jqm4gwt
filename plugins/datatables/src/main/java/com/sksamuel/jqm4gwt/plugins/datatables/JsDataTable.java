@@ -1508,4 +1508,7 @@ public class JsDataTable {
         return t.fnSettings().oLanguage.sEmptyTable;
     }-*/;
 
+    static native void setPageLength(Element elt, int length) /*-{
+        $wnd.$(elt).DataTable().page.len(length);
+    }-*/;
 }
